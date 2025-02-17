@@ -1,0 +1,182 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* Estilos del Header */
+header {
+    background-color: #228B22; /* Verde selva */
+    padding: 45px;
+    text-align: center;
+    color: white;
+}
+
+header .subtitle {
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+
+/* Estilo para la sección de introducción */
+#intro {
+    padding: 40px 20px;
+    background-color: white(119, 140, 249);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 80%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#intro h2 {
+    color: #4CAF50;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#intro p {
+    color: #333;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#gallery {
+    display: flex;
+    justify-content: space-between; /* Distribuye las imágenes uniformemente */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 10px;
+    flex-wrap: wrap;
+    
+    background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+    text-align: center;
+    margin: 30px auto;
+    max-width: 1200px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#gallery:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contenedor de imágenes */
+.image-container {
+    /*flex: 1;  Hace que todas las imágenes ocupen el mismo espacio */
+    width: 100%;
+    max-width: 100%; /* Limita el ancho máximo de cada imagen */
+    position: relative;
+    transition: all 0.3s ease-in-out; /* Transición suave al cambiar la imagen */
+    display: inline-block;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out; /* Transición suave para el cambio de opacidad y transformación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+    opacity: 0.8; /* Reduce la opacidad para que el cambio sea más suave */
+}
+
+/* Estilo de las leyendas debajo de las imágenes */
+.image-caption {
+    font-size: 2.5rem;
+    margin-top: 10px;
+    font-style: italic;
+    position: absolute;
+    top: 10px; /* Coloca el texto al fondo de la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Sombra para mejorar la legibilidad */
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1em;
+    margin-top: 40px;
+}
+
+/* Enlace al pie de página */
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/*
+#back-button {
+    display: none;  // Oculto al inicio 
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    */
+
+
+    #back-button {
+        display: none; /* Oculto al inicio */
+        margin: 20px auto;  /* Centra el botón horizontalmente */
+        padding: 12px 30px;
+        background-color: #28a745; /* Color verde más suave */
+        color: white;
+        border: none;
+        border-radius: 8px; /* Bordes más redondeados */
+        font-size: 16px; /* Aumentamos el tamaño de la fuente */
+        font-weight: bold; /* Hace la fuente más negrita */
+        text-transform: uppercase; /* Hace el texto en mayúsculas */
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos de transición */
+    }
+    
+    #back-button:hover {
+        background-color: #218838; /* Color verde más oscuro cuando se pasa el mouse */
+        transform: translateY(-3px); /* Efecto de desplazamiento hacia arriba */
+    }
+    
+    #back-button:active {
+        background-color: #1e7e34; /* Color cuando el botón es presionado */
+        transform: translateY(0); /* Vuelve a su posición original */
+    }
+    

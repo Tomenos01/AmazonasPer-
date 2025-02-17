@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Latido Verde del Amazonas Peruano</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body onload="loadPage('home')">
+
+    <!-- Encabezado -->
+    <header>
+        <div class="header-container">
+            <h1>El latido verde del Amazonas peruano</h1>
+            <p class="subtitle">Biodiversidad y conservación</p>
+        </div>
+    </header>
+
+    <!-- Introducción -->
+    <section id="intro">
+        <h2>Bienvenidos al corazón del Amazonas Peruano</h2>
+        <p>El Amazonas peruano es un ecosistema increíblemente diverso que alberga una de las mayores concentraciones de biodiversidad en el planeta. Con sus vastos bosques, ríos caudalosos y una increíble variedad de especies, el Amazonas se ha ganado el título de "pulmón del mundo". Sin embargo, esta riqueza natural está amenazada por actividades humanas, lo que hace que los esfuerzos de conservación sean más urgentes que nunca.</p>
+            <p>En este trabajo exploraremos las riquezas naturales del Amazonas peruano, haciendo especial énfasis en su fauna, flora y los esfuerzos por preservar su biodiversidad única. A través de este recorrido, comprenderemos la importancia de proteger este valioso ecosistema para las futuras generaciones.</p>
+    </section>
+
+        <!-- Sección de imágenes interactivas -->
+        <section id="gallery">
+            <div class="image-container" onmouseover="changeImage(this)" onmouseout="resetImage(this)" onclick="loadConservacion('conservacion')">
+                <img src="images/Puente1.jpg" alt="Fauna del Amazonas" class="main-image" data-hover="images/rio_guapore.jpg">
+                <p class="image-caption">Conservación</p>
+            </div>
+        
+            <div class="image-container" onmouseover="changeImage(this)" onmouseout="resetImage(this)" onclick="loadFauna('fauna')">
+                <img src="https://peruamazontrips.com/wp-content/uploads/2023/11/jaguar_riverside-1536x1000.webp" alt="Flora del Amazonas" class="main-image" data-hover="images/Loro_guacamayo.jpg">
+                <p class="image-caption">Fauna del Amazonas</p>
+            </div>
+        
+            <div class="image-container" onmouseover="changeImage(this)" onmouseout="resetImage(this)" onclick="loadFlora('flora')">
+                <img src="images/flora1.jpg" alt="Deforestación en el Amazonas" class="main-image" data-hover="images/flora3.jpg">
+                <p class="image-caption">Flora del Amazonas</p>
+            </div>
+        </section>
+
+        
+    
+
+    <button id="back-button" onclick="goBack()">Volver</button>
+    
+    <!-- Pie de página -->
+    <footer>
+        <p> Tomás Orejas.</p>
+    </footer>
+
+    <script src="scripts.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>
+
